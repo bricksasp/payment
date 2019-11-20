@@ -1,0 +1,25 @@
+{
+    "name": "bricksasp/payment",
+    "description": "bricksasp payment模块",
+    "keywords": ["yii2", "payment"],
+    "type": "yii2-extension",
+    "support": {
+        "issues": "https://github.com/bricksasp/payment/issues",
+        "source": "https://github.com/bricksasp/payment"
+    },
+    "authors": [
+        {
+            "name": "bricksasp",
+            "email": "649909457@qq.com"
+        }
+    ],
+    "require": {
+        "bricksasp/base": "~1.0",
+        "riverslei/payment": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "bricksasp\\payment\\": ""
+        }
+    }
+}
