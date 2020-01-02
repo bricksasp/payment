@@ -5,6 +5,9 @@ use bricksasp\helpers\Tools;
 use bricksasp\payment\models\BillPay;
 use Yii;
 
+/**
+ * 下单
+ */
 class PlaceOrder {
     public static $error;
 
