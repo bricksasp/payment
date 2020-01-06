@@ -46,6 +46,9 @@ class Wechat extends BaseObject implements PayInterface
                 'user_id'=> $this->data['user_id'], 
                 'owner_id'=> $this->data['owner_id']
             ])->one();
+        if (empty($wx)) {
+            Tools::exceptionBreak(950003);
+        }
         $payData = [
             'body'    => '支付单' . $this->data['payment_id'],
             'order_no'    => $this->data['payment_id'],
