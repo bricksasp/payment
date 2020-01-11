@@ -29,22 +29,21 @@ class PlaceOrder {
 		]);
 
 		// 三方平台下单
-		$res = $model->pay($data);
+		$payParams = $model->pay($data);
 
-        if (!$res) {
+        if (!$payParams) {
             self::$error = $model->error;
             return false;
         }
 
         // 创建支付单
 		$data['payment_code'] = $type;
-		$data['trade_no'] = $res['trade_no'];
-		$data['payed_info'] = json_encode($res);
+		$data['trade_no'] = $data['payment_id'];
 		$model = new BillPay();
 		$model->load($data);
         
         self::$error = $model->errors;
-		return $model->save() ? $model : false;
+		return $model->save() ? $payParams : false;
 	}
 
 	public static function refundBill($class = '', $data = []) {
