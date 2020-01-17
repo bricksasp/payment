@@ -85,7 +85,7 @@ class Payment extends \bricksasp\base\BaseActiveRecord
             ],
             'const_config' => [
                 'use_sandbox'     => true,
-                'notify_url'      => Url::to(['/order/pay/wx'],'https'),
+                'notify_url'      => Url::to(['/order/pay/wxnotify'],'https'),
                 'redirect_url'    => Url::to(['/order/pay/payed'],'https'),
                 'return_raw'      => false,
             ]
@@ -103,7 +103,7 @@ class Payment extends \bricksasp\base\BaseActiveRecord
             ],
             'const_config' => [
                 'use_sandbox'     => true,
-                'notify_url'      => Url::to(['/order/pay/ali'],'https'),
+                'notify_url'      => Url::to(['/order/pay/alinotify'],'https'),
                 'return_url'      => Url::to(['/order/pay/payed'],'https'),
                 'return_raw'      => false,
             ]
@@ -122,7 +122,7 @@ class Payment extends \bricksasp\base\BaseActiveRecord
             ],
             'const_config' => [
                 'use_sandbox'     => true,
-                'notify_url'      => Url::to(['/order/pay/cmb'],'https'),
+                'notify_url'      => Url::to(['/order/pay/cmbnotify'],'https'),
                 'sign_notify_url' => '成功签约结果通知地址',
                 'return_url'      => Url::to(['/order/pay/payed'],'https'),
                 'return_raw'      => false,

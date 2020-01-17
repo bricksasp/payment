@@ -24,10 +24,6 @@ class BillPay extends \bricksasp\base\BaseActiveRecord
                 'class' => \yii\behaviors\TimestampBehavior::className(),
                 'createdAtAttribute' => 'created_at',
                 'updatedAtAttribute' => 'updated_at',
-            ],
-            [
-                'class' => \bricksasp\helpers\behaviors\UidBehavior::className(),
-                'createdAtAttribute' => 'user_id',
             ]
         ];
     }

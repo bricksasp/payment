@@ -40,6 +40,7 @@ class PlaceOrder {
 		$data['payment_code'] = $type;
 		$data['trade_no'] = $data['payment_id'];
 		$model = new BillPay();
+		$data['user_id'] = $data['owner_id'];
 		$model->load($data);
         
         self::$error = $model->errors;
