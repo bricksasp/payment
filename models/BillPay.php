@@ -9,6 +9,8 @@ use Yii;
  */
 class BillPay extends \bricksasp\base\BaseActiveRecord
 {
+    const PAY_STATUS_NO = 1;
+    const PAY_STATUS_SUCCESS = 2;
     /**
      * {@inheritdoc}
      */
